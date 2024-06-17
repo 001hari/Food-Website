@@ -1,8 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-
-
 const restaurantList = [
   {
     "info": {
@@ -1445,62 +1440,4 @@ const restaurantList = [
 },
 ];
 
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src="https://static.vecteezy.com/system/resources/previews/002/285/943/original/food-service-logo-design-template-free-vector.jpg"/>
-
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact US</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  )
-}
-
-const RestaurentCard = ({resdata}) =>{
-  const { name,cuisines,cloudinaryImageId,avgRating} = resdata.info;
-  return (
-    <div className="res-card">
-      <img
-      className="res-logo"
-      alt="res-logo"
-      src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId}/>
-      <h3>{name}</h3>
-      <h4>{cuisines.join(",")}</h4>
-      <h4>{avgRating}</h4>
-    </div>
-  )
-}
-
-const Body = () => {
-  return(
-   <div className="body">
-      <div className="search">Search</div>
-      <div className="res-container">
-        {restaurantList.map((restaurant)=>{
-          return <RestaurentCard key={restaurant.info.id} resdata={restaurant} />
-        })}
-      </div>
-   </div>
-  )
-}
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header/>
-      <Body/>
-    </div>
-  )
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout/>)
+export default restaurantList;

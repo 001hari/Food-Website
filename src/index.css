@@ -24,9 +24,10 @@
 
 .res-card{
   background-color: #f0f0f0;
-  /* padding: 5px; */
+  padding: 5px;
   margin: 10px;
   width: 200px;
+  border: 2px solid rgb(255, 255, 255);
 }
 
 .res-card h4{
@@ -39,7 +40,7 @@
 
 .res-card:hover{
 
-  border: 2px solid rgb(255, 214, 214);
+  border: 2px solid rgb(0, 0, 0);
 }
 
 .res-logo{
